@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <NavHeader />
-      <Container fluid='lg' as='main'>
+      <Container fluid='lg' as='main' className='my-lg-5 my-3'>
         <Routes>
           <Route path='/' element={<MainPage />} />
           <Route path='/cards' element={<CardsPage />} />
