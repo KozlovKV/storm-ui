@@ -1,22 +1,23 @@
-import './App.scss';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import NavHeader from '../navHeader/NavHeader';
+import { MainPage, CardsPage, DecsPage, EditDecPage } from './../pages';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <NavHeader />
+        <main>
+          <Routes>
+            <Route path="/" element={<MainPage/>} />
+            <Route path="/cards" element={<CardsPage/>} />
+            <Route path="/decs" element={<DecsPage/>} />
+            <Route path="/decs/:id" element={<EditDecPage/>} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
 
