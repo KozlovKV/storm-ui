@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import NavHeader from '../navHeader/NavHeader';
-import { MainPage, CardsPage, DecsPage, EditDecPage } from './../pages';
+import { MainPage, CardsPage, DecsPage, EditDecPage, MagicPage } from './../pages';
 import Container from 'react-bootstrap/esm/Container';
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
           <Route path='/cards' element={<CardsPage />} />
           <Route path='/decs' element={<DecsPage />} />
           <Route path='/decs/:id' element={<EditDecPage />} />
+          <Route path='/M4G1C' element={<MagicPage />} />
         </Routes>
       </Container>
     </BrowserRouter>
