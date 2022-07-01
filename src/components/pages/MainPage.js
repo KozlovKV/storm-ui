@@ -45,7 +45,22 @@ export default function MainPage() {
 				<Card border="warning">
 					<Card.Header><h2>Registration</h2></Card.Header>
 					<Card.Body>
-						form...
+						<Form>
+							<Row className="row-cols-1 row-cols-lg-3 g-2">
+								<Col>
+									<Form.Control type="email" placeholder="Email" />
+								</Col>
+								<Col>
+									<Form.Control type="password" placeholder="Password" />
+								</Col>
+								<Col>
+									<Form.Control type="password" placeholder="Repeat password" />
+								</Col>
+							</Row>
+							<div className="d-flex justify-content-around">
+								<Button type="sumbit" variant="warning" className="mt-2">Register</Button>
+							</div>
+						</Form>
 					</Card.Body>
 				</Card>
 			</Col>
